@@ -1,0 +1,17 @@
+LIL DOE / TYDO DAILY DRAFT — FASTEST DEPLOYMENT
+
+1. Extract this ZIP.
+2. On GitHub, create a PUBLIC repository named: doe-tydo-daily-draft
+3. Do not add GitHub's automatic README; this project already has one.
+4. In the new repository, choose Add file > Upload files.
+5. Upload everything INSIDE the extracted doe-tydo-daily-draft folder.
+6. Open Settings > Pages.
+7. Choose Deploy from a branch > main > /(root), then Save.
+
+Expected site address:
+https://alexostler72.github.io/doe-tydo-daily-draft/
+
+To invite Tydo:
+Settings > Collaborators > Add people
+
+Full instructions and maintenance notes are in README.md.

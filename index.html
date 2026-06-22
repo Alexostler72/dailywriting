@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A shared daily writing prompt for Lil Doe, Tydo, and friends.">
+  <meta name="theme-color" content="#11131a">
+  <title>Lil Doe / Tydo Daily Draft</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the prompt</a>
+
+  <header class="site-header">
+    <div class="brand-lockup">
+      <div class="brand-mark" aria-hidden="true">D/T</div>
+      <div>
+        <p class="eyebrow">A shared writing ritual</p>
+        <h1>Lil Doe / Tydo Daily Draft</h1>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-button is-active" type="button" data-view="today" aria-current="page">Today</button>
+      <button class="nav-button" type="button" data-view="archive">Archive</button>
+      <button class="nav-button" type="button" data-view="about">How it works</button>
+    </nav>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section id="today-view" class="view-panel" aria-labelledby="prompt-heading">
+      <div class="hero-copy">
+        <p id="date-line" class="date-line"></p>
+        <h2 id="prompt-heading">One prompt. Two voices. No excuses.</h2>
+        <p class="hero-description">You both receive the same official prompt each day. Write separately, compare later, or just keep the streak alive.</p>
+      </div>
+
+      <article class="prompt-card" aria-live="polite">
+        <div class="prompt-meta">
+          <span id="prompt-mode" class="mode-badge">Official daily prompt</span>
+          <span id="prompt-category" class="category-badge"></span>
+        </div>
+
+        <blockquote id="prompt-text" class="prompt-text"></blockquote>
+
+        <div class="prompt-actions">
+          <button id="copy-prompt" class="button button-primary" type="button">Copy prompt</button>
+          <button id="another-prompt" class="button button-secondary" type="button">View another prompt</button>
+          <button id="back-to-today" class="button button-quiet" type="button" hidden>Back to today</button>
+        </div>
+      </article>
+
+      <section class="writing-panel" aria-labelledby="writing-heading">
+        <div class="writing-header">
+          <div>
+            <p class="eyebrow">Private draft</p>
+            <h3 id="writing-heading">Write your response</h3>
+          </div>
+          <div class="draft-stats" aria-live="polite">
+            <span id="word-count">0 words</span>
+            <span aria-hidden="true">•</span>
+            <span id="save-status">Saved on this device</span>
+          </div>
+        </div>
+
+        <label class="sr-only" for="response-input">Your writing response</label>
+        <textarea id="response-input" rows="14" placeholder="Start writing here…"></textarea>
+
+        <div class="writing-actions">
+          <button id="download-response" class="button button-secondary" type="button">Download response</button>
+          <button id="clear-response" class="button button-quiet danger" type="button">Clear draft</button>
+        </div>
+
+        <p class="privacy-note">Drafts are stored only in this browser. They are not uploaded to GitHub or shared with the other writer.</p>
+      </section>
+    </section>
+
+    <section id="archive-view" class="view-panel" aria-labelledby="archive-heading" hidden>
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Past sparks</p>
+          <h2 id="archive-heading">Prompt archive</h2>
+          <p>Every official prompt since launch, newest first.</p>
+        </div>
+        <label class="search-field">
+          <span class="sr-only">Search archived prompts</span>
+          <input id="archive-search" type="search" placeholder="Search prompts or categories">
+        </label>
+      </div>
+
+      <div id="archive-list" class="archive-list"></div>
+      <p id="archive-empty" class="empty-state" hidden>No archived prompts match that search.</p>
+    </section>
+
+    <section id="about-view" class="view-panel" aria-labelledby="about-heading" hidden>
+      <div class="about-grid">
+        <div>
+          <p class="eyebrow">Under the hood</p>
+          <h2 id="about-heading">Same day, same prompt</h2>
+          <p>The site uses the calendar date in the <strong>America/Denver</strong> time zone to choose a prompt from the shared library. No account, server, database, or paid API is involved.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Official prompt</h3>
+          <p>The official daily prompt is deterministic: everyone opening the site on the same project date sees the same result.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Extra practice</h3>
+          <p>“View another prompt” gives you a bonus prompt without replacing or changing the official prompt of the day.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Private writing</h3>
+          <p>Your response auto-saves through local browser storage. It stays on that browser unless you download the text file yourself.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for Lil Doe, Tydo, and the daily discipline of making something from nothing.</p>
+  </footer>
+
+  <!-- Prompt data loads first, then the application logic uses it. -->
+  <script src="js/prompts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
