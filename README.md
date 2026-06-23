@@ -1,4 +1,4 @@
-# Lil Doe / Tydo Daily Draft
+# Big Al and Lil Doe's prompterium
 
 A beginner-friendly daily writing-prompt website built with plain HTML, CSS, and JavaScript. It is designed to run free on GitHub Pages without a server, database, paid API, or build system.
 
